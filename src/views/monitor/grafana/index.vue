@@ -181,7 +181,7 @@
         </el-col>
         <el-col :span="20">
           <div style="padding: 10px;border-left:1px solid #DCDFE6">
-            <el-date-picker
+            <!-- <el-date-picker
               style="float: right;z-index: 1"
               size="small"
               v-model="orderCountDate"
@@ -193,7 +193,7 @@
               end-placeholder="结束日期"
               @change="handleDateChange"
               :picker-options="pickerOptions">
-            </el-date-picker>
+            </el-date-picker> -->
             <div>
               <ve-line
                 :data="chartData"

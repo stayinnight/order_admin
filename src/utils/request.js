@@ -29,11 +29,13 @@ service.interceptors.response.use(
   */
     const res = response.data
     if (res.code !== 200) {
-      Message({
-        message: res.message,
-        type: 'error',
-        duration: 3 * 1000
-      })
+      
+      // 抛错不展示
+      // Message({
+      //   message: res.message,
+      //   type: 'error',
+      //   duration: 3 * 1000
+      // })
 
       // 401:未登录;
       if (res.code === 401) {
@@ -54,11 +56,11 @@ service.interceptors.response.use(
   },
   error => {
     console.log('err' + error)// for debug
-    Message({
-      message: error.message,
-      type: 'error',
-      duration: 3 * 1000
-    })
+    // Message({
+    //   message: error.message,
+    //   type: 'error',
+    //   duration: 3 * 1000
+    // })
     return Promise.reject(error)
   }
 )
